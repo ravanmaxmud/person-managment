@@ -23,19 +23,24 @@ namespace Person_managment.DataBase.PersonRepository
             {
                 if (adresses[i].Id == id)
                 {
+                    Console.WriteLine(adresses[i].GetInfo());
                     adresses.RemoveAt(i);
                 }
             }
         }
-        public static Adress UpdateAdress(int id, Adress adress)
+        public static Adress UpdateAdress(int id, string name)
         {
+            Adress adress = null;
+
             for (int i = 0; i < adresses.Count; i++)
             {
                 if (adresses[i].Id == id)
                 {
-                    adresses[i].Name = adress.Name;
+                    adresses[i].Name = name;
+                    adress = adresses[i];
                 }
             }
+
             return adress;
         }
 

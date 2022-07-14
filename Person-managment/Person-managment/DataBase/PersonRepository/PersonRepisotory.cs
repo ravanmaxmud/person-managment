@@ -11,7 +11,7 @@ namespace Person_managment.DataBase.PersonRepository
     {
         public static List<Person> persons = new List<Person>();
 
-        public static Person Add(string name,
+        public static Person AddPerson(string name,
             string lastName,
             string fatherName,
             string email,

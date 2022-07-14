@@ -18,6 +18,10 @@ namespace Person_managment.DataBase.Models
             Id = _adressIdCounter;
             _adressIdCounter++;   
         }
+        public string GetInfo()
+        {
+            return Id + " " + Name;
+        }
 
 
     }
