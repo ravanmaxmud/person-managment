@@ -44,6 +44,25 @@ namespace Person_managment.DataBase.PersonRepository
                 }
             }
         }
+        public static Person Update(int id, Person person, string name,
+            string lastName,
+            string fatherName,
+            string email,
+            string fin)
+        {
+            for (int i = 0; i < persons.Count; i++)
+            {
+                if (persons[i].Id == id)
+                {
+                    persons[i].FirstName = name;
+                    persons[i].LastName = lastName;
+                    persons[i].FatherName = fatherName;
+                    persons[i].Email = email;
+                    persons[i].FIN = fin;
+                }
+            }
+            return person;
+        }
 
 
     }
