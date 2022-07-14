@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Person_managment.DataBase.Models
 {
-     class Person
+    class Person
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -15,9 +15,9 @@ namespace Person_managment.DataBase.Models
         public string FIN { get; set; }
         public int Id { get; set; }
         public static int _idCounter = 1;
-    
 
-        public Person(string firstName ,string lastName, string fatherName,string eMail ,string fin)
+
+        public Person(string firstName, string lastName, string fatherName, string eMail, string fin)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -26,6 +26,10 @@ namespace Person_managment.DataBase.Models
             FIN = fin;
             Id = _idCounter;
             _idCounter++;
+        }
+        public string GetInfo()
+        {
+            return FirstName + " " + LastName + " " + FatherName + " " + Email + " " + FIN;
         }
 
     }
