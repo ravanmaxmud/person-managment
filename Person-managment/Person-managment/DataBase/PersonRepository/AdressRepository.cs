@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Person_managment.DataBase.PersonRepository
 {
-    
+
     internal class AdressRepository
     {
         public static List<Adress> adresses = new List<Adress>();
@@ -17,6 +17,27 @@ namespace Person_managment.DataBase.PersonRepository
             adresses.Add(adress);
             return adress;
         }
-   
+        public static void RemoveAdress(int id)
+        {
+            for (int i = 0; i < adresses.Count; i++)
+            {
+                if (adresses[i].Id == id)
+                {
+                    adresses.RemoveAt(i);
+                }
+            }
+        }
+        public static Adress UpdateAdress(int id, Adress adress)
+        {
+            for (int i = 0; i < adresses.Count; i++)
+            {
+                if (adresses[i].Id == id)
+                {
+                    adresses[i].Name = adress.Name;
+                }
+            }
+            return adress;
+        }
+
     }
 }

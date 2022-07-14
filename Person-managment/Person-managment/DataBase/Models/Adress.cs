@@ -8,14 +8,14 @@ namespace Person_managment.DataBase.Models
 {
     class Adress
     {
-       public string AdressName { get; set; }
-        public int AdressId { get; set; }
+       public string Name { get; set; }
+        public int Id { get; set; }
 
         public static int _adressIdCounter = 1;
         public Adress(string adressName)
         {
-            AdressName = adressName;
-            AdressId = _adressIdCounter;
+            Name = adressName;
+            Id = _adressIdCounter;
             _adressIdCounter++;   
         }
 
