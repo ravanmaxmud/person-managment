@@ -22,7 +22,29 @@ namespace Person_managment.DataBase.PersonRepository
             persons.Add(person);
             return person;
         }
-        
-        
+        public static void RemovePerson(string fin)
+        {
+            for (int i = 0; i < persons.Count; i++)
+            {
+                if (persons[i].FIN == fin)
+                {
+                    persons.RemoveAt(i);
+
+                }
+            }
+        }
+        public static void RemovePerson(int id)
+        {
+
+            for (int i = 0; i < persons.Count; i++)
+            {
+                if (persons[i].Id == id)
+                {
+                    persons.RemoveAt(i);
+                }
+            }
+        }
+
+
     }
 }
