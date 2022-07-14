@@ -29,7 +29,18 @@ namespace Person_managment.DataBase.PersonRepository
                 if (persons[i].FIN == fin)
                 {
                     persons.RemoveAt(i);
-                    Console.WriteLine("Remove it is person");
+
+                }
+            }
+        }
+        public static void RemovePerson(int id)
+        {
+
+            for (int i = 0; i < persons.Count; i++)
+            {
+                if (persons[i].Id == id)
+                {
+                    persons.RemoveAt(i);
                 }
             }
         }
